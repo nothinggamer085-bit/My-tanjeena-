@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#071f29" />
+  <title>For Tanjeena ♡</title>
+  <style>
+    :root {
+      --ink: #effff9;
+      --muted: rgba(239, 255, 249, .70);
+      --glass: rgba(255, 255, 255, .075);
+      --line: rgba(255, 255, 255, .13);
+      --mint: #98efd5;
+      --blue: #8fc7ff;
+      --deep: #04151d;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(33, 121, 126, .35), transparent 32%),
+        radial-gradient(circle at 84% 82%, rgba(41, 87, 151, .30), transparent 34%),
+        linear-gradient(145deg, #03131a, #092e32 48%, #071d2c);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+
+    .ambient {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(22px);
+      opacity: .35;
+      pointer-events: none;
+      animation: drift 9s ease-in-out infinite alternate;
+    }
+    .ambient.one { width: 220px; height: 220px; background: #38b9a1; top: -80px; left: -80px; }
+    .ambient.two { width: 260px; height: 260px; background: #3977ba; right: -100px; bottom: -100px; animation-delay: -3s; }
+    @keyframes drift { to { transform: translate(25px, 35px) scale(1.08); } }
+
+    .screen {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .panel {
+      width: min(560px, 100%);
+      padding: 34px 24px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: var(--glass);
+      box-shadow: 0 28px 90px rgba(0,0,0,.35);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      text-align: center;
+      animation: panelIn .8s ease both;
+    }
+    @keyframes panelIn {
+      from { opacity: 0; transform: translateY(18px) scale(.985); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      font-size: 11px;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1, h2, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 13vw, 78px);
+      font-weight: 500;
+      line-height: .95;
+      letter-spacing: -.04em;
+      text-shadow: 0 0 34px rgba(152, 239, 213, .16);
+    }
+    h2 {
+      margin-bottom: 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 8vw, 48px);
+      font-weight: 500;
+    }
+    .lead {
+      max-width: 430px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .main-btn, .mini-btn {
+      border: 1px solid rgba(255,255,255,.18);
+      color: var(--ink);
+      background: linear-gradient(135deg, rgba(152,239,213,.16), rgba(143,199,255,.12));
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      font: inherit;
+      cursor: pointer;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease;
+    }
+    .main-btn {
+      margin-top: 28px;
+      padding: 14px 22px;
+      border-radius: 999px;
+    }
+    .main-btn:hover, .mini-btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.35); }
+    .main-btn:active, .mini-btn:active { transform: scale(.97); }
+
+    .heart-shell {
+      width: 108px;
+      height: 108px;
+      margin: 6px auto 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #dffff7, #66d7bf 24%, #265f6a 58%, #102a3b 80%);
+      box-shadow: 0 0 32px rgba(152,239,213,.24), 0 0 80px rgba(143,199,255,.12);
+      animation: breathe 3.6s ease-in-out infinite;
+      font-size: 38px;
+    }
+    @keyframes breathe { 50% { transform: translateY(-7px) scale(1.035); box-shadow: 0 0 44px rgba(152,239,213,.31), 0 0 100px rgba(143,199,255,.14); } }
+
+    .letter {
+      min-height: 340px;
+      text-align: left;
+      white-space: pre-wrap;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(18px, 4.8vw, 22px);
+      line-height: 1.75;
+      color: rgba(245,255,252,.94);
+      text-shadow: 0 0 18px rgba(152,239,213,.10);
+    }
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.05em;
+      margin-left: 3px;
+      vertical-align: -.12em;
+      background: var(--mint);
+      animation: blink .75s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .memory-card {
+      min-height: 135px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.055);
+      color: var(--ink);
+      font: inherit;
+      cursor: pointer;
+      transition: transform .25s ease, background .25s ease;
+    }
+    .memory-card:hover { transform: translateY(-3px); }
+    .memory-card .icon { display: block; margin-bottom: 10px; font-size: 24px; }
+    .memory-card .reveal { display: none; font-family: Georgia, serif; font-size: 17px; line-height: 1.55; }
+    .memory-card.open { background: rgba(152,239,213,.10); }
+    .memory-card.open .front { display: none; }
+    .memory-card.open .reveal { display: block; }
+
+    .final-copy {
+      max-width: 450px;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      line-height: 1.75;
+      color: rgba(245,255,252,.93);
+    }
+    .final-copy strong { color: #cffff1; font-weight: 600; }
+
+    .choice-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .mini-btn { padding: 12px 16px; border-radius: 999px; }
+
+    .music-control {
+      position: fixed;
+      top: max(14px, env(safe-area-inset-top));
+      right: 14px;
+      z-index: 20;
+      width: 44px;
+      height: 44px;
+      display: none;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 50%;
+      color: white;
+      background: rgba(5,26,34,.58);
+      backdrop-filter: blur(12px);
+      cursor: pointer;
+    }
+    .music-control.show { display: grid; }
+
+    .hint { margin-top: 22px; font-size: 11px; letter-spacing: .08em; color: rgba(255,255,255,.38); }
+    .hidden { display: none !important; }
+
+    .petal-field, .spark-field { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .petal {
+      position: absolute;
+      top: -24px;
+      width: 10px;
+      height: 16px;
+      border-radius: 90% 10% 80% 20%;
+      background: linear-gradient(145deg, rgba(196,255,234,.7), rgba(123,193,255,.25));
+      animation: fall linear forwards;
+    }
+    @keyframes fall {
+      0% { opacity: 0; transform: translate3d(0,-30px,0) rotate(0); }
+      10% { opacity: .8; }
+      100% { opacity: 0; transform: translate3d(var(--sway),110vh,0) rotate(620deg); }
+    }
+    .spark {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(207,255,241,.95);
+      box-shadow: 0 0 16px 6px rgba(152,239,213,.17);
+      animation: sparkOut .9s ease-out forwards;
+    }
+    @keyframes sparkOut { to { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; } }
+
+    @media (max-width: 430px) {
+      .screen { padding: 18px; }
+      .panel { padding: 30px 18px; border-radius: 26px; }
+      .cards { grid-template-columns: 1fr; }
+      .memory-card { min-height: 110px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient one"></div>
+  <div class="ambient two"></div>
+  <div class="petal-field" id="petalField"></div>
+  <div class="spark-field" id="sparkField"></div>
+
+  <audio id="bgMusic" src="./music.mp3" preload="auto" loop></audio>
+  <button class="music-control" id="musicControl" aria-label="Pause music" title="Pause music">♫</button>
+
+  <main>
+    <section class="screen" id="opening">
+      <div class="panel">
+        <div class="eyebrow">a quiet little place for you</div>
+        <h1>Tanjeena</h1>
+        <p class="lead">
+          I know things between us are not easy right now. I made this without expecting an instant answer—just hoping you would feel the sincerity behind it.
+        </p>
+        <button class="main-btn" id="beginBtn">Open what I couldn’t say</button>
+        <div class="hint">Sound begins softly after you tap</div>
+      </div>
+    </section>
+
+    <section class="screen hidden" id="letterScreen">
+      <div class="panel">
+        <div class="heart-shell">♡</div>
+        <div class="eyebrow">from me, honestly</div>
+        <div class="letter"><span id="typedText"></span><span class="cursor"></span></div>
+        <button class="main-btn hidden" id="continueBtn">There is a little more</button>
+      </div>
+    </section>
+
+    <section class="screen hidden" id="cardsScreen">
+      <div class="panel">
+        <div class="eyebrow">four things I truly mean</div>
+        <h2>Tap each little heart</h2>
+        <p class="lead">These are not promises made only because I am scared. They are things I should have understood and shown better.</p>
+
+        <div class="cards">
+          <button class="memory-card">
+            <span class="front"><span class="icon">♡</span>I understand</span>
+            <span class="reveal">Your anger has a reason. I don’t want to dismiss it just because it is painful for me to hear.</span>
+          </button>
+          <button class="memory-card">
+            <span class="front"><span class="icon">☾</span>I am sorry</span>
+            <span class="reveal">I’m sorry for the moments my actions made you feel unheard, unimportant, or emotionally tired.</span>
+          </button>
+          <button class="memory-card">
+            <span class="front"><span class="icon">✦</span>I will listen</span>
+            <span class="reveal">When you speak, I want to understand first—not interrupt, defend myself, or turn your feelings into another fight.</span>
+          </button>
+          <button class="memory-card">
+            <span class="front"><span class="icon">∞</span>You matter</span>
+            <span class="reveal">Even when we are upset, your place in my heart does not suddenly become small or meaningless.</span>
+          </button>
+        </div>
+
+        <button class="main-btn" id="finalBtn">Read the last part</button>
+      </div>
+    </section>
+
+    <section class="screen hidden" id="finalScreen">
+      <div class="panel">
+        <div class="eyebrow">no pressure, only honesty</div>
+        <h2>If you’re still reading…</h2>
+        <div class="final-copy" id="finalCopy">
+          I know a beautiful page cannot erase what hurt you.<br><br>
+          I made it because ordinary messages kept feeling too small for everything I wanted to say.<br><br>
+          I don’t want to hold you through guilt, fear, or pressure. I want to become someone whose actions make you feel safe, respected, and valued.<br><br>
+          Take the time you need. When you are ready, I will listen calmly and honestly.<br><br>
+          <strong>You are deeply important to me, Tanjeena.</strong>
+        </div>
+        <div class="choice-row">
+          <button class="mini-btn" id="listeningBtn">♡ I’m listening</button>
+          <button class="mini-btn" id="timeBtn">☁ I need time</button>
+        </div>
+        <div class="hint">Made with care, not pressure.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const musicControl = document.getElementById('musicControl');
+    const opening = document.getElementById('opening');
+    const letterScreen = document.getElementById('letterScreen');
+    const cardsScreen = document.getElementById('cardsScreen');
+    const finalScreen = document.getElementById('finalScreen');
+    const typedText = document.getElementById('typedText');
+    const continueBtn = document.getElementById('continueBtn');
+
+    music.volume = 0.16;
+    music.setAttribute('playsinline', '');
+    music.load();
+
+    const message = `Tanjeena…\n\nI know you are angry with me, and I know that anger did not appear without a reason.\n\nI don’t want to use dramatic words to make you forget what happened. I want to acknowledge that something I did made your heart feel hurt, tired, or distant.\n\nMaybe I understood your feelings late. Maybe I was too busy explaining myself when I should have simply listened. For that, I am genuinely sorry.\n\nI am not making this website to force you to stay. I made it because you matter enough for me to slow down, think carefully, and speak with sincerity.\n\nI cannot change the moments that hurt you, but I can learn from them. I can listen without arguing. I can respect your feelings without making everything about my fear of losing you.\n\nI still care about us. Quietly, honestly, and more deeply than I sometimes know how to show.`;
+
+    function showOnly(section) {
+      [opening, letterScreen, cardsScreen, finalScreen].forEach(s => s.classList.add('hidden'));
+      section.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    async function startMusic() {
+      musicControl.classList.add('show');
+      try {
+        music.currentTime = 0;
+        await music.play();
+        musicControl.textContent = '♫';
+        musicControl.setAttribute('aria-label', 'Pause music');
+      } catch (error) {
+        console.log('Music could not autoplay:', error);
+        musicControl.textContent = '♪';
+        musicControl.setAttribute('aria-label', 'Tap to play music');
+      }
+    }
+
+    document.getElementById('beginBtn').addEventListener('click', async () => {
+      if (navigator.vibrate) navigator.vibrate(90);
+      await startMusic();
+      showOnly(letterScreen);
+      typeLetter();
+    });
+
+    let charIndex = 0;
+    function typeLetter() {
+      if (charIndex >= message.length) {
+        continueBtn.classList.remove('hidden');
+        return;
+      }
+      typedText.textContent += message.charAt(charIndex);
+      const current = message.charAt(charIndex);
+      charIndex += 1;
+      const delay = current === '\n' ? 145 : (/[.,…]/.test(current) ? 75 : 24);
+      setTimeout(typeLetter, delay);
+    }
+
+    continueBtn.addEventListener('click', () => showOnly(cardsScreen));
+    document.getElementById('finalBtn').addEventListener('click', () => showOnly(finalScreen));
+
+    document.querySelectorAll('.memory-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('open');
+        if (navigator.vibrate) navigator.vibrate(25);
+      });
+    });
+
+    musicControl.addEventListener('click', async (event) => {
+      event.stopPropagation();
+      if (music.paused) {
+        try {
+          await music.play();
+          musicControl.textContent = '♫';
+          musicControl.setAttribute('aria-label', 'Pause music');
+        } catch (error) {
+          console.log('Music play failed:', error);
+        }
+      } else {
+        music.pause();
+        musicControl.textContent = '♪';
+        musicControl.setAttribute('aria-label', 'Play music');
+      }
+    });
+
+    document.getElementById('listeningBtn').addEventListener('click', () => {
+      document.getElementById('finalCopy').innerHTML = `<strong>Thank you for listening.</strong><br><br>You do not have to fix everything immediately. When you speak, I will try to hear your feelings properly instead of only defending mine.<br><br>Even this small moment means a lot to me, Tanjeena. ♡`;
+      burst(window.innerWidth / 2, window.innerHeight / 2, 20);
+    });
+
+    document.getElementById('timeBtn').addEventListener('click', () => {
+      document.getElementById('finalCopy').innerHTML = `<strong>Take the time you need.</strong><br><br>I will not turn my feelings into pressure on you. I only hope that, whenever you are ready, we can talk with calm hearts and complete honesty.<br><br>Your peace matters too, Tanjeena.`;
+    });
+
+    function createPetal() {
+      const petal = document.createElement('span');
+      petal.className = 'petal';
+      petal.style.left = `${Math.random() * 100}vw`;
+      petal.style.setProperty('--sway', `${-80 + Math.random() * 180}px`);
+      petal.style.animationDuration = `${7 + Math.random() * 7}s`;
+      petal.style.opacity = `${.25 + Math.random() * .5}`;
+      petal.style.transform = `scale(${.65 + Math.random() * .8})`;
+      document.getElementById('petalField').appendChild(petal);
+      setTimeout(() => petal.remove(), 15000);
+    }
+    setInterval(createPetal, 520);
+
+    function burst(x, y, count = 8) {
+      const field = document.getElementById('sparkField');
+      for (let i = 0; i < count; i++) {
+        const spark = document.createElement('span');
+        spark.className = 'spark';
+        spark.style.left = `${x}px`;
+        spark.style.top = `${y}px`;
+        spark.style.setProperty('--dx', `${-65 + Math.random() * 130}px`);
+        spark.style.setProperty('--dy', `${-65 + Math.random() * 130}px`);
+        field.appendChild(spark);
+        setTimeout(() => spark.remove(), 950);
+      }
+    }
+
+    document.addEventListener('pointerdown', event => burst(event.clientX, event.clientY, 5));
+  </script>
+</body>
+</html>
