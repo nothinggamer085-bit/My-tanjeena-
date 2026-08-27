@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Tanjeena ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;overflow-x:hidden;color:#f4f7ff;font-family:'DM Sans',sans-serif;background:radial-gradient(circle at 12% 18%,rgba(93,226,205,.2),transparent 34%),radial-gradient(circle at 88% 15%,rgba(139,137,255,.2),transparent 34%),radial-gradient(circle at 55% 88%,rgba(239,133,208,.16),transparent 36%),linear-gradient(135deg,#06141a,#091421 48%,#111026)}
+body:before{content:"";position:fixed;inset:-30%;z-index:0;pointer-events:none;filter:blur(75px);background:radial-gradient(ellipse at 25% 30%,rgba(78,229,203,.16),transparent 38%),radial-gradient(ellipse at 75% 25%,rgba(119,135,255,.16),transparent 38%),radial-gradient(ellipse at 60% 75%,rgba(235,113,201,.12),transparent 38%);animation:aurora 18s ease-in-out infinite alternate}@keyframes aurora{to{transform:translate(3%,-3%) scale(1.08)}}
+.orb{position:fixed;border-radius:50%;filter:blur(45px);opacity:.25;z-index:0;pointer-events:none;animation:float 12s ease-in-out infinite alternate}.o1{width:180px;height:180px;left:-70px;top:20%;background:#5ce0cf}.o2{width:160px;height:160px;right:-50px;top:48%;background:#8885ff;animation-delay:3s}.o3{width:190px;height:190px;left:35%;bottom:-90px;background:#ef82ca;animation-delay:6s}@keyframes float{to{transform:translate(42px,-35px)}}
+#stars{position:fixed;inset:0;overflow:hidden;z-index:1;pointer-events:none}.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:0 0 10px #fff;animation:star linear forwards}@keyframes star{0%{transform:translateY(105vh);opacity:0}15%{opacity:.7}85%{opacity:.45}100%{transform:translateY(-10vh);opacity:0}}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;position:relative;z-index:5}.card{width:min(540px,100%);padding:42px 25px;border-radius:32px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 30px 100px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.12);animation:appear 1s ease}@keyframes appear{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}.hidden{display:none!important}
+.label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(220,239,255,.52);margin-bottom:20px}.title,.heading,.finalTitle{font-family:'Playfair Display',serif;font-weight:400}.title{font-size:58px;color:#f8fbff;text-shadow:0 0 10px rgba(255,255,255,.25),0 0 38px rgba(126,211,255,.16),0 0 70px rgba(190,130,255,.1);animation:glow 4s ease-in-out infinite}@keyframes glow{50%{text-shadow:0 0 14px rgba(255,255,255,.38),0 0 45px rgba(126,211,255,.24),0 0 80px rgba(190,130,255,.15)}}.subtitle{max-width:400px;margin:18px auto 0;color:rgba(232,242,255,.68);font-size:14px;line-height:1.9}.mainButton{margin-top:30px;padding:15px 28px;border-radius:999px;border:1px solid rgba(255,255,255,.17);color:#f5fbff;background:rgba(255,255,255,.075);box-shadow:0 0 28px rgba(120,190,255,.08);font:400 14px 'DM Sans',sans-serif;cursor:pointer;transition:.3s}.mainButton:active{transform:scale(.95)}.footer{margin-top:24px;font-size:10px;letter-spacing:2px;color:rgba(230,245,255,.34)}
+.glow{width:100px;height:100px;margin:0 auto 25px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(170,238,230,.55) 30%,rgba(110,160,230,.25) 60%,transparent 75%);box-shadow:0 0 40px rgba(130,220,230,.25),0 0 90px rgba(120,150,255,.12);animation:breathe 5s ease-in-out infinite}@keyframes breathe{50%{transform:scale(1.08)}}.heading{font-size:38px;margin-bottom:25px;text-shadow:0 0 25px rgba(135,210,255,.15)}.typed{font-family:'Playfair Display',serif;font-size:19px;line-height:1.9;text-align:left;color:rgba(240,247,255,.89);text-shadow:0 0 10px rgba(220,245,255,.08);white-space:pre-line}.cursor{display:inline-block;width:2px;height:20px;background:#e1faff;box-shadow:0 0 8px #96dcff;animation:blink .7s infinite}@keyframes blink{50%{opacity:0}}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}.memory{min-height:150px;padding:20px 13px;border-radius:23px;cursor:pointer;background:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.12);box-shadow:0 15px 45px rgba(0,0,0,.14);transition:.45s;opacity:0;transform:translateY(28px) scale(.94)}.memory.show{animation:cardIn .75s ease forwards}@keyframes cardIn{to{opacity:1;transform:none}}.memory.open{background:linear-gradient(145deg,rgba(180,225,255,.12),rgba(210,160,255,.08));box-shadow:0 0 40px rgba(150,210,255,.12)}.icon{font-size:26px;margin-bottom:10px;filter:drop-shadow(0 0 9px rgba(255,255,255,.25))}.memory h3{font:400 19px 'Playfair Display',serif;margin-bottom:8px}.reveal{display:none;font-size:12px;line-height:1.65;color:rgba(235,245,255,.72)}.memory.open .reveal{display:block;animation:reveal .5s ease}@keyframes reveal{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.music{position:fixed;top:16px;right:16px;z-index:30;width:45px;height:45px;border-radius:50%;display:none;align-items:center;justify-content:center;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(15px);font-size:17px}.flash{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:0;background:radial-gradient(circle,rgba(255,255,255,.72),rgba(150,220,255,.18) 18%,transparent 55%)}.flash.go{animation:flash 1.4s ease forwards}@keyframes flash{0%{opacity:0;transform:scale(.35)}25%{opacity:1}100%{opacity:0;transform:scale(2.2)}}.heart{position:fixed;left:50%;top:50%;z-index:101;font-size:75px;opacity:0;pointer-events:none;filter:drop-shadow(0 0 28px rgba(255,150,210,.75));transform:translate(-50%,-50%) scale(.2)}.heart.go{animation:heart 2s ease forwards}@keyframes heart{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}30%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}60%{transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}}
+.finalTitle{font-size:41px;margin-bottom:23px}.finalText{font-family:'Playfair Display',serif;font-size:19px;line-height:1.9;color:rgba(237,246,255,.82)}.finalText strong{color:#fff;text-shadow:0 0 15px rgba(180,225,255,.25)}
+@media(max-width:450px){.card{padding:36px 20px}.title{font-size:50px}.heading{font-size:34px}.typed{font-size:18px}.finalTitle{font-size:36px}.memory{min-height:140px}}
+</style></head><body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div id="stars"></div><div class="flash" id="flash"></div><div class="heart" id="heart">♡</div>
+<audio id="music" src="./music.mp3" preload="auto" playsinline></audio><button class="music" id="musicBtn" onclick="toggleMusic()">♫</button>
+<section class="screen" id="home"><div class="card"><div class="label">just for you</div><h1 class="title">Tanjeena.</h1><p class="subtitle">I could have sent you another message...<br>But I wanted you to have a little moment instead.</p><button class="mainButton" onclick="begin()">Stay for a little while ♡</button><div class="footer">take your time</div></div></section>
+<section class="screen hidden" id="letter"><div class="card"><div class="glow"></div><div class="label">something I wanted to say</div><h2 class="heading">Read this slowly.</h2><div class="typed"><span id="typed"></span><span class="cursor"></span></div>
+<div class="cards">
+<div class="memory" onclick="openCard(this)"><div class="icon">🌙</div><h3>I understand</h3><div class="reveal">I know you're angry, and your feelings are valid. I don't want to fight against what you feel.</div></div>
+<div class="memory" onclick="openCard(this)"><div class="icon">🫶</div><h3>No pressure</h3><div class="reveal">You don't have to forgive me instantly or reply right away. Take your time.</div></div>
+<div class="memory" onclick="openCard(this)"><div class="icon">✨</div><h3>Something real</h3><div class="reveal">Even through difficult moments, I'm genuinely grateful that I got to know you.</div></div>
+<div class="memory" onclick="openCard(this)"><div class="icon">💌</div><h3>One last thing</h3><div class="reveal">I never wanted you to feel unimportant to me. Your place in my life has always mattered.</div></div>
+</div><button class="mainButton" onclick="showFinal()">One last thing ♡</button></div></section>
+<section class="screen hidden" id="final"><div class="card"><div class="label">Tanjeena</div><h2 class="finalTitle">If you're still reading...</h2><div class="finalText">I don't want this little page to put any pressure on you.<br><br>I just wanted you to know that I'm genuinely sorry for the moments where I hurt you.<br><br>I know words cannot undo something that already happened.<br><br>So I'm not asking you to forget anything.<br><br>I only want you to know that your feelings matter to me.<br><br>If there is ever a time when you want to talk, I would rather listen properly than turn it into another argument.<br><br>You don't have to answer right now.<br><br>Just take care of yourself.<br><br><strong>You matter to me, Tanjeena. ♡</strong></div><div class="footer">made quietly, with sincerity.</div></div></section>
+<script>
+const music=document.getElementById('music'),musicBtn=document.getElementById('musicBtn'),TARGET_VOLUME=.12;let fadeTimer=null;
+function begin(){if(navigator.vibrate)navigator.vibrate([40,30,70]);document.getElementById('flash').classList.add('go');document.getElementById('heart').classList.add('go');document.getElementById('home').classList.add('hidden');document.getElementById('letter').classList.remove('hidden');musicBtn.style.display='flex';startMusic();typeMessage();document.querySelectorAll('.memory').forEach((c,i)=>setTimeout(()=>c.classList.add('show'),650+i*300));setTimeout(()=>{document.getElementById('flash').classList.remove('go');document.getElementById('heart').classList.remove('go')},2300)}
+function startMusic(){if(fadeTimer)clearInterval(fadeTimer);music.volume=0;music.currentTime=0;music.play().then(()=>{let v=0;const duration=8000,stepMs=100,step=TARGET_VOLUME/(duration/stepMs);fadeTimer=setInterval(()=>{v+=step;if(v>=TARGET_VOLUME){v=TARGET_VOLUME;clearInterval(fadeTimer);fadeTimer=null}music.volume=v},stepMs)}).catch(()=>{musicBtn.textContent='▶'})}
+function toggleMusic(){if(music.paused)music.play().then(()=>musicBtn.textContent='♫');else{music.pause();musicBtn.textContent='▶'}}
+const message=`Tanjeena...
+
+I know things aren't okay right now.
+
+And I don't want to pretend that a few beautiful words can magically fix everything.
+
+If I hurt you, I'm genuinely sorry.
+
+Not because I want you to stop being angry.
+
+But because I know your feelings deserve to be understood.
+
+There are moments where I could have handled things differently.
+
+I could have listened more.
+
+I could have understood you better.
+
+And I know saying that now doesn't change what already happened.
+
+But I don't want to repeat the same mistakes.
+
+I made this little place because sometimes a normal message feels too small for everything sitting in my head.
+
+I'm not asking you to forget.
+
+I'm not asking you to suddenly be okay.
+
+And I'm definitely not asking you to give me an answer right now.
+
+I just wanted you to know that I genuinely care about you.
+
+Even when things become difficult.
+
+Even when we're angry.
+
+And even when I don't know the right words to say.
+
+You matter to me.
+
+And I'm sorry for every moment where my actions made you feel otherwise.`;let pos=0;function typeMessage(){if(pos>=message.length)return;document.getElementById('typed').textContent+=message[pos++];setTimeout(typeMessage,message[pos-1]=='\n'?150:24)}
+function openCard(card){document.querySelectorAll('.memory').forEach(c=>{if(c!==card)c.classList.remove('open')});card.classList.toggle('open');if(navigator.vibrate)navigator.vibrate(30);card.querySelector('.icon').animate([{transform:'scale(1)'},{transform:'scale(1.3)'},{transform:'scale(1)'}],{duration:450})}
+function showFinal(){document.getElementById('letter').classList.add('hidden');document.getElementById('final').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+function makeStar(){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'vw';s.style.animationDuration=8+Math.random()*10+'s';s.style.opacity=.2+Math.random()*.6;document.getElementById('stars').appendChild(s);setTimeout(()=>s.remove(),19000)}setInterval(makeStar,450);
+</script></body></html>
